@@ -29,9 +29,10 @@ func _physics_process(delta):
 	if state == IDLE and input_direction:
 		_change_state(MOVE)
 	elif state == MOVE:
-		move()
 		if not input_direction:
 			_change_state(IDLE)
+		move()
+
 
 
 func update_direction():
